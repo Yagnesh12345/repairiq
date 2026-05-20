@@ -518,11 +518,11 @@ const raw = data.choices?.[0]?.message?.content || "";
               )}
 
               {/* Feedback */}
-              {Object.keys(booked).length > 0 && <FeedbackCard />}
+              {Object.keys(booked).length > 0 && <FeedbackCard
                 stars={fbStars} text={fbText} done={fbDone}
                 onStar={setFbStars} onText={setFbText}
                 onSubmit={() => setFbDone(true)}
-              />
+              />}
 
               <button
                 className="outline-btn"
