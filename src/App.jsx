@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const TECHS = [
-  { id: 1, name: "Ravi Kumar", spec: ["AC", "Fan", "Wiring", "Switchboard"], area: "Vijayawada", rating: 4.8, jobs: 312, phone: "9876543210", avail: true, exp: "8 yrs", price: "₹200" },
+  { id: 1, name: "SreeHari Rao", spec: ["AC", "Fan", "Wiring", "Switchboard", "Plumbing", "AC"], area: "Vijayawada", rating: 4.8, jobs: 312, phone: "9491991503", avail: true, exp: "30 yrs", price: "₹300" },
   { id: 2, name: "Suresh Babu", spec: ["Plumbing", "Water Motor", "Pipeline"], area: "Vijayawada", rating: 4.6, jobs: 189, phone: "9876543211", avail: true, exp: "5 yrs", price: "₹150" },
   { id: 3, name: "Nagaraju", spec: ["AC", "Refrigerator", "Washing Machine"], area: "Guntur", rating: 4.9, jobs: 428, phone: "9876543212", avail: false, exp: "12 yrs", price: "₹250" },
   { id: 4, name: "Prasad Rao", spec: ["Wiring", "Solar", "Inverter"], area: "Visakhapatnam", rating: 4.7, jobs: 256, phone: "9876543213", avail: true, exp: "9 yrs", price: "₹180" },
@@ -99,7 +99,7 @@ function TokenModal({ freeUsed, onClaim, onClose }) {
         <div className="modal-icon">🎫</div>
         <div className="modal-title">Your Free Service Token</div>
         <div className="modal-desc">
-          RepairIQ gives you one completely free service visit — redeemable at any time. Use it on your 1st, 2nd, or 3rd booking. It's yours to keep.
+          Your free RepairIQ service visit—redeem whenever you want. First, second, or any booking. It’s locked in for you.
         </div>
         <div className="modal-highlight">
           ⭐ No expiry &nbsp;·&nbsp; No conditions &nbsp;·&nbsp; Any service category<br />
