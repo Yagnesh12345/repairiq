@@ -284,18 +284,23 @@ export default function App() {
 RULES: solution_type=diy ONLY for simple non-expert fixes (tripped breaker, dirty filter, clogged drain, dust). solution_type=technician for anything needing tools, parts, gas, rewiring. severity=high means dangerous or urgent.`;
 
     try {
-      const res = await fetch("https://api.anthropic.com/v1/messages", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          model: "claude-sonnet-4-20250514",
-          max_tokens: 1000,
-          system: systemPrompt,
-          messages: [{ role: "user", content: `Category: ${cat.label}\nProblem: ${problem}\nCity: ${city}` }],
-        }),
-      });
-      const data = await res.json();
-      const raw = (data.content || []).map(b => b.text || "").join("");
+const res = await fetch("https://api.openai.com/v1/chat/completions", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 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"
+  },
+  body: JSON.stringify({
+    model: "gpt-4o",
+    max_tokens: 1000,
+    messages: [
+      { role: "system", content: systemPrompt },
+      { role: "user", content: `Category: ${cat.label}\nProblem: ${problem}\nCity: ${city}` }
+    ],
+  }),
+});
+const data = await res.json();
+const raw = data.choices?.[0]?.message?.content || "";
       const clean = raw.replace(/```json|```/g, "").trim();
       setResult(JSON.parse(clean));
     } catch {
@@ -513,7 +518,7 @@ RULES: solution_type=diy ONLY for simple non-expert fixes (tripped breaker, dirt
               )}
 
               {/* Feedback */}
-              <FeedbackCard
+              {Object.keys(booked).length > 0 && <FeedbackCard />}
                 stars={fbStars} text={fbText} done={fbDone}
                 onStar={setFbStars} onText={setFbText}
                 onSubmit={() => setFbDone(true)}
