@@ -288,7 +288,7 @@ const res = await fetch("https://api.openai.com/v1/chat/completions", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
-    "Authorization": "Bearer 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"
+    "Authorization": `Bearer ${import.meta.env.VITE_OPENAI_KEY}`
   },
   body: JSON.stringify({
     model: "gpt-4o",
