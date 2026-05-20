@@ -354,7 +354,7 @@ const raw = data.choices?.[0]?.message?.content || "";
               </div>
 
               <div className="stats-row fade-2">
-                {[["1,200+", "Problems Solved"], ["6", "Cities in AP"], ["4.8★", "Avg Rating"]].map(([v, l]) => (
+                {[["2", "Problems Solved"], ["6", "Cities in AP"], ["4.8★", "Avg Rating"]].map(([v, l]) => (
                   <div key={l} className="stat-card">
                     <div className="stat-val">{v}</div>
                     <div className="stat-lbl">{l}</div>
