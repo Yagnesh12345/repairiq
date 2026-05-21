@@ -1,14 +1,14 @@
-# 🔧 RepairIQ — AI-Powered Home Repair Assistant
+# 🔧 GrihaFix — AI-Powered Home Repair Assistant
 
 > Built for Andhra Pradesh homeowners — diagnose any home problem instantly using AI.
 
-🌐 **Live Demo:** https://repairiq-sepia.vercel.app
+🌐 **Live Demo:** https://GrihaFix-sepia.vercel.app
 
 ---
 
-## 🚀 What is RepairIQ?
+## 🚀 What is GrihaFix?
 
-RepairIQ is an AI-powered home repair app that helps homeowners in Andhra Pradesh fix problems faster.
+GrihaFix is an AI-powered home repair app that helps homeowners in Andhra Pradesh fix problems faster.
 
 Describe your problem → AI diagnoses it instantly → Get DIY fix or connect to a local technician.
 
